@@ -1,0 +1,88 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eee7ff, #d9c8ff);
+}
+
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(50, 30, 80, 0.15);
+    width: 350px;
+    max-width: 95vw;
+}
+
+h1 {
+    color: #5b35a5;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #777;
+    margin-top: 5px;
+}
+
+#status {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5b35a5;
+    margin: 22px 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #f0eaff;
+    color: #5b35a5;
+    font-size: 42px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cell:hover:not(:disabled) {
+    background: #e0d2ff;
+}
+
+.cell:disabled {
+    cursor: default;
+}
+
+.cell.winner {
+    background: #c9f7d5;
+    color: #176b35;
+}
+
+.reset-btn {
+    margin-top: 22px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #6b42b8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background: #4e2b91;
+}
